@@ -91,7 +91,7 @@ header {
     /* Full height */
     height: 100vh;
     /* Center and scale the image nicely */
-    background-position: center top;
+    background-position: center 40%;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -159,34 +159,6 @@ header .intro-text .skills {
 	.navbar-fixed-top.navbar-shrink {
 		padding: 10px 0;
 	}
-}
-
-.navbar-fixed-top.navbar-shrink {
-	animation: fadeNavbar .3s; /***Transition delay .3s fadeout is class***/
-    -moz-animation: fadeNavbar .3s; /* Firefox */
-    -webkit-animation: fadeNavbar .3s; /* Safari and Chrome */
-    -o-animation: fadeNavbar .3s; /* Opera */
-	animation-fill-mode: forwards;
-}
-
-@keyframes fadeNavbar {
-    from { background: #{{ site.color.navbar-primary }} }
-    to { background: #{{ site.color.secondary }} }
-}
-
-@-moz-keyframes fadeNavbar { /* Firefox */
-    from { background: #{{ site.color.navbar-primary }} }
-    to { background: #{{ site.color.secondary }} }
-}
-
-@-webkit-keyframes fadeNavbar { /* Safari and Chrome */
-    from { background: #{{ site.color.navbar-primary }} }
-    to { background: #{{ site.color.secondary }} }
-}
-
-@-o-keyframes fadeNavbar { /* Opera */
-    from { background: #{{ site.color.navbar-primary }} }
-    to { background: #{{ site.color.secondary }} }
 }
 
 .navbar {

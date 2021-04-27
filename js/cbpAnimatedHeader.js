@@ -17,10 +17,25 @@ var cbpAnimatedHeader = (function() {
 
 	function init() {
 		window.addEventListener( 'scroll', function( event ) {
+			//changing header size
 			if( !didScroll ) {
 				didScroll = true;
 				setTimeout( scrollPage, 250 );
 			}
+			
+			//changing header opacity
+			const currentScroll = window.pageYOffset;
+			const startFade = 100; //height in px when fade will startToFade
+			const endFade = 300; //height when fade will stop
+			if (currentScroll <= startFade) {
+			    opacity = 0
+			} else if (currentScroll <= endFade) {
+				opacity = (currentScroll - startFade) / (endFade - startFade);
+			} else {
+				opacity = 1;
+			}
+			const color = `rgba(40,81,144,${opacity})`;
+			document.querySelector('.navbar-fixed-top').style.background = color;
 		}, false );
 	}
 
