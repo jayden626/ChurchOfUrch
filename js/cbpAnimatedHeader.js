@@ -15,7 +15,14 @@ var cbpAnimatedHeader = (function() {
 		didScroll = false,
 		changeHeaderOn = 300;
 
-	function init() {
+	function init() {	
+
+		//Set navbar to shrink and opaque if page loads already scrolled
+		if( window.pageYOffset > changeHeaderOn) {
+			classie.add( header, 'navbar-shrink' );
+			header.style.background = `rgba(40,81,144,1`;
+		}
+		
 		window.addEventListener( 'scroll', function( event ) {
 			//changing header size
 			if( !didScroll ) {
@@ -34,8 +41,7 @@ var cbpAnimatedHeader = (function() {
 			} else {
 				opacity = 1;
 			}
-			const color = `rgba(40,81,144,${opacity})`;
-			document.querySelector('.navbar-fixed-top').style.background = color;
+			header.style.background = `rgba(40,81,144,${opacity})`;
 		}, false );
 	}
 
