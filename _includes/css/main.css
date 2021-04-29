@@ -43,6 +43,11 @@ hr {
     border: 0;
     border-top: solid 4px;
 }
+
+hr.tight{
+	margin: 15px auto 0px;
+}
+
 hr.star-light,
 hr.star-primary {
     overflow: visible; /* For IE */
@@ -622,6 +627,7 @@ div.work-tech  ul{
    width:100%;
    overflow:hidden;
    position:relative;
+   margin: 10px auto 10px;
 }
 .centeredmenu ul {
    clear:left;
@@ -661,5 +667,5 @@ div.work-tech  ul{
 .centeredmenu ul li a.active,
 .centeredmenu ul li a.active:hover {
    color:#{{ site.color.secondary }};
-   background: rgba({{ site.color.link-box-rgb }},.1);
+   background: rgba({{ site.color.link-box-rgb }},.25);
 }
