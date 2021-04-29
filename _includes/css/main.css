@@ -109,17 +109,23 @@ header img {
     margin: 0 auto 20px;
 }
 
+header .intro-text {
+	padding-bottom: 2%;
+}
+
 header .intro-text .name {
     display: block;
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 2.2em;
     font-weight: 700;
+	text-shadow: black 0px 0px 10px;
 }
 
 header .intro-text .skills {
     font-size: 1.25em;
     font-weight: 300;
+	text-shadow: black 0px 0px 10px;
 }
 
 @media(min-width:768px) {
@@ -165,6 +171,7 @@ header .intro-text .skills {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
+	text-shadow: black 0px 0px 10px;
 }
 
 .navbar a:focus {
@@ -185,7 +192,7 @@ header .intro-text .skills {
 }
 
 section {
-    padding: 65px 30px;
+    padding: 40px 30px;
 }
 
 section h2 {
@@ -203,11 +210,11 @@ section.tout {
 
 @media(max-width:767px) {
     section {
-        padding: 50px 0;
+        padding: 40px 0;
     }
 
     section.first {
-        padding-top: 50px;
+        padding-top: 40px;
     }
 }
 
@@ -519,4 +526,140 @@ header .intro-text .name {
     .collapsing {
         overflow: hidden!important;
     }
+}
+
+/* Work slide stuff */
+div.work-tech  ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+	div.work-tech {
+		text-align: center;
+	}
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.work-slide {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: .7s;
+  animation-name: fade;
+  animation-duration: .7s;
+  animation-fill-mode: forwards;
+  
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* css mess to center work history buttons */
+.centeredmenu {
+   float:left;
+   width:100%;
+   overflow:hidden;
+   position:relative;
+}
+.centeredmenu ul {
+   clear:left;
+   float:left;
+   list-style:none;
+   margin:0;
+   padding:0;
+   position:relative;
+   left:50%;
+   text-align:center;
+}
+.centeredmenu ul li {
+   display:block;
+   float:left;
+   list-style:none;
+   margin:0;
+   padding-left: 5px;
+   padding-right: 5px;
+   position:relative;
+   right:50%;
+}
+.centeredmenu ul li a {
+   display:block;
+   margin:0 0 0 1px;
+   padding:3px 10px;
+   color:#{{ site.color.secondary }};
+   text-decoration:none;
+   line-height:1.3em;
+   border: 1px solid #{{ site.color.secondary }};
+   border-radius: 4px;
+   cursor: pointer;
+}
+.centeredmenu ul li a:hover {
+   color:#{{ site.color.secondary }};
+   background: rgba({{ site.color.link-box-rgb }},.1);
+}
+.centeredmenu ul li a.active,
+.centeredmenu ul li a.active:hover {
+   color:#{{ site.color.secondary }};
+   background: rgba({{ site.color.link-box-rgb }},.1);
 }
